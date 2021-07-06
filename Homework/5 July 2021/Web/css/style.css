@@ -1,0 +1,78 @@
+.header {
+    text-align:center;
+    color:white;
+}
+.playlist-container {
+    display: flex;
+    border-bottom: solid 4px rgba(190, 144, 212,.7);
+    border-top: solid 4px rgba(190, 144, 212,.7);
+    border-radius: 20px;
+    padding: 20px 0;
+    margin:20px 0;
+}
+.playlist-item {
+    display: flex;
+    padding: 10px;
+    width: 50%;
+    margin: 20px;
+}
+
+    .playlist-item img {
+        display: block;
+        text-align: center;
+        margin: 20px;
+        border-radius:50px;
+    }
+
+.playlist-item-left {
+    width: 30%;
+
+}
+
+.playlist-item-right {
+    width: 70%;
+    margin-left: 10px;
+    position:relative;
+}
+
+.playlist-item-right p{
+    font-size:13px;
+    color:white;
+}
+
+.page-container {
+    width: 80%;
+    margin: auto;
+}
+
+.form-create-playlist {
+    margin: 20px 0;
+}
+
+.button {
+    border-radius: 10px;
+    background: rgba(102, 51, 153, 1);
+    color:white;
+    padding:3px 10px;
+
+}
+.button:hover {
+    opacity:.7;
+}
+
+body {
+    background-color:skyblue;
+    color:white;
+}
+
+.button-playlist {
+    bottom: 2px;
+    right: 2px;
+    position: absolute;
+}
+
+.divstyle {
+    border: solid 3px rgba(148, 124, 176, 1);
+    background: rgba(190, 144, 212,.7);
+    border-radius: 7px;
+}
