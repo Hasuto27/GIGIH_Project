@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../code/code.js"></script>
+    <script src="../code/jquerry.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="page-container">
+
+        <div class="header">
+            <h1>Title</h1>
+        </div>
+
+        <div class="form-create-playlist">
+            <h1>Create Playlist</h1>
+            <form action="/" id="formPlaylist">
+                <label>Title :</label><br />
+                <input class="divstyle" type="text" name="title" required/> <br /><br />
+                <label>Description :</label><br />
+                <textarea class="divstyle" cols="50" rows="5" required></textarea><br /><br />
+                <button class="button" name="submitPlaylist" onclick="alerting()">Submit</button>
+            </form>
+        </div>
+
+        <div class="playlist-container">
+            <div class="playlist-item divstyle">
+                <div class="playlist-item-left">
+                    <img src="../pictures/logo_playlist.jfif" alt="Alternate Text" width="100px" height="100px" />
+                </div>
+
+                <div class="playlist-item-right">
+                    <h3>{Playlist Title}</h3>
+                    <p>{Artist Name}</p>
+                    <p>{Album Name}</p>
+                    <button class="button button-playlist tombolGet">Play</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            const Url = 'https://gist.githubusercontent.com/aryapradipta9/e6492383477803b233916e01f36d5465/raw/66942c739d66d3774303f84071696aa865a07077/single-sample.json';
+            $('.tombolGet').click(function () {
+                $.ajax({
+                    url: Url,
+                    type: "GET",
+                    success: function (result) {
+                        console.log(result);
+                    },
+                    error: function (error) {
+                        alert('Error');
+                    }
+                })
+            })
+        })
+    </script>
+</body>
